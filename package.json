@@ -33,9 +33,12 @@
     "serve": "^11.1.0"
   },
   "dependencies": {
+    "baseui": "^9.52.0",
     "preact": "^10.0.1",
     "preact-render-to-string": "^5.1.0",
-    "preact-router": "^3.0.0"
+    "preact-router": "^3.0.0",
+    "styletron-engine-atomic": "^1.4.5",
+    "styletron-react": "^5.2.7"
   },
   "jest": {
     "preset": "jest-preset-preact",
