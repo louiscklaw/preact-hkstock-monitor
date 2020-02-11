@@ -1,4 +1,4 @@
-import * as React from "react";
+import {Component } from 'preact';
 
 import {
 	HeaderNavigation,
@@ -17,7 +17,7 @@ import lang from '../lang/zh_tw';
 import MenuList from './MenuList';
 import NavButtonItem from "./NavButtonItem";
 
-export default class NavRight extends React.Component{
+export default class NavRight extends Component{
 
   getLoginMenu(){
     return(

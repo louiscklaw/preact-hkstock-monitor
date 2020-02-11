@@ -1,5 +1,4 @@
-import * as React from "react";
-
+import {Component } from 'preact';
 import {
   HeaderNavigation,
   ALIGN,
@@ -12,7 +11,7 @@ import { Button } from "baseui/button";
 import SubMenu from './SubMenu';
 import TestButtonMenu from './ButtonMenu';
 
-export default class NavLeft extends React.Component{
+export default class NavLeft extends Component{
   render(){
     return(
       <>

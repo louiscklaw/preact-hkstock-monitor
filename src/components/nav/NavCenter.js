@@ -1,4 +1,4 @@
-import * as React from "react";
+import {Component } from 'preact';
 
 import {
   HeaderNavigation,
@@ -21,7 +21,7 @@ let list_menu_content = [
   { label: lang.LIST_BUY_SELL_LIST, href:'/buy_sell_list' },
 ]
 
-export default class NavRight extends React.Component{
+export default class NavRight extends Component{
 
   getMenu(){
     return MenuList.map(x=>{

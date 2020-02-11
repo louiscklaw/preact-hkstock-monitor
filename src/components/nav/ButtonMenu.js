@@ -1,4 +1,4 @@
-import * as React from "react";
+import {Component } from 'preact';
 
 import {Button} from 'baseui/button';
 import ChevronDown from 'baseui/icon/chevron-down';
@@ -9,7 +9,7 @@ import SubMenu from './SubMenu';
 
 
 
-export default class ButtonMenu extends React.Component {
+export default class ButtonMenu extends Component {
   constructor(props){
     super(props);
     this.state={

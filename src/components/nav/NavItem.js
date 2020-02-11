@@ -1,4 +1,4 @@
-import * as React from "react";
+import {Component } from 'preact';
 
 import {
   HeaderNavigation,
@@ -14,7 +14,7 @@ import TestButtonMenu from './ButtonMenu';
 
 import NavLink from './NavLink';
 
-export default class NavItem extends React.Component{
+export default class NavItem extends Component{
   render({text, href}){
     return(
       <StyledNavigationItem>

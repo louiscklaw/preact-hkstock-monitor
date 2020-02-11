@@ -1,4 +1,5 @@
-import * as React from "react";
+import {Component } from 'preact';
+
 import { Table,Filter } from "baseui/table";
 
 const table_content = [

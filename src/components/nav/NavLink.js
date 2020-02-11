@@ -1,4 +1,4 @@
-import * as React from "react";
+import {Component } from 'preact';
 
 import {
   HeaderNavigation,
@@ -14,7 +14,7 @@ import TestButtonMenu from './ButtonMenu';
 
 import lang from '../lang/zh_tw'
 
-export default class NavLink extends React.Component{
+export default class NavLink extends Component{
   render({text, href}){
     return(
       <StyledLink href={href}>

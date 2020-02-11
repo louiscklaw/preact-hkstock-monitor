@@ -1,6 +1,6 @@
-import * as React from "react";
+import {Component } from 'preact';
 
-export default class NavButton extends React.Component{
+export default class NavButton extends Component{
   render(){
     return(
       <>
