@@ -5,16 +5,11 @@ const styled={
   position: 'absolute'
 };
 
-export default () => {
+export default ({menu_content}) => {
   return (
     <div style={styled}>
       <StatefulMenu
-        items={[
-          { label: "Item One" },
-          { label: "Item Two" },
-          { label: "Item Three" },
-          { label: "Item Four" }
-        ]}
+        items={menu_content}
       />
     </div>
   );

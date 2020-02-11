@@ -19,29 +19,15 @@ import NavButtonItem from "./NavButtonItem";
 
 export default class NavRight extends React.Component{
 
-  getMenu(){
-    console.log('navitem', MenuList.map(x=>{
-      return x
-    }))
-    return MenuList.map(x=>{
-      return ( <NavItem text={x.text} href={x.href} /> )
-    })
-  }
-
   getLoginMenu(){
     return(
-      <NavButtonItem text="Login" />
+      <NavButtonItem text={lang.INDEX_LOGIN} />
     )
   }
 
 	render(){
 		return(
 			<>
-        <StyledNavigationList $align={ALIGN.right}>
-          {this.getMenu()}
-
-        </StyledNavigationList>
-
         <StyledNavigationList $align={ALIGN.right}>
           {this.getLoginMenu()}
         </StyledNavigationList>

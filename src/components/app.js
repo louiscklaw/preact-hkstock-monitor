@@ -8,12 +8,19 @@ import HelloworldPage from '../routes/helloworld'
 import Home from '../routes/home';
 import Profile from '../routes/profile';
 
+import BasicList from '../routes/basic_list';
+import BuySellList from '../routes/buy_sell_list'
+import TestDataTablePage from '../routes/TestDataTable';
+import TestCssGrid from '../routes/TestCssGrid';
+import TestPages from '../routes/TestPages';
+
 import {Client as Styletron} from 'styletron-engine-atomic';
 import {Provider as StyletronProvider} from 'styletron-react';
 import {LightTheme, BaseProvider} from 'baseui';
 import {StatefulInput} from 'baseui/input';
 
-import Nav from '../components/nav/index';
+import Nav from '../components/nav';
+
 
 const engine = new Styletron();
 
@@ -32,13 +39,35 @@ export default class App extends Component {
 			<div id="app">
 				<StyletronProvider value={engine}>
         	<BaseProvider theme={LightTheme}>
-            <Nav />
-						<Router onChange={this.handleRoute}>
-							<Home path="/" />
-              <HelloworldPage path="/helloworld" />
-							<Profile path="/profile/" user="me" />
-							<Profile path="/profile/:user" />
-						</Router>
+            <div style={{
+              height: '100vh',
+              display:'grid',
+              gridTemplateRows: '10% auto'
+              }}>
+
+              <div>
+                <Nav></Nav>
+              </div>
+
+              <div>
+                <Router onChange={this.handleRoute}>
+                  <Home path="/" />
+
+                  <HelloworldPage path="/helloworld" />
+
+                  <BuySellList path="/buy_sell_list" />
+                  <BasicList path="/basic_list" />
+
+                  <Profile path="/profile/" user="me" />
+                  <Profile path="/profile/:user" />
+
+                  <TestDataTablePage path="/test_datatable" />
+                  {/* <TestCssGrid path="/test_css_grid" /> */}
+                  <TestPages path="/test_pages" />
+
+                </Router>
+              </div>
+            </div>
 					</BaseProvider>
       	</StyletronProvider>
 			</div>

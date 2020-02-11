@@ -24,7 +24,10 @@ const zh_hk = {
   INDEX_DJI: 'DJI',
   INDEX_RMB: '人民幣',
   INDEX_SIGN_UP:'登記',
-  INDEX_LOGIN:'登入'
+  INDEX_LOGIN:'登入',
+
+  LIST_BASIC_LIST:'basic list',
+  LIST_BUY_SELL_LIST:'buy sell list'
 };
 
 export default zh_hk;

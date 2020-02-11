@@ -1,12 +1,15 @@
 import * as React from "react";
 
+import {Button} from 'baseui/button';
+import ChevronDown from 'baseui/icon/chevron-down';
+import {StatefulPopover, PLACEMENT} from 'baseui/popover';
+import {StatefulMenu} from 'baseui/menu';
 import {styled} from 'baseui';
-
-import { Button } from "baseui/button";
-
 import SubMenu from './SubMenu';
 
-export default class TestButtonMenu extends React.Component {
+
+
+export default class ButtonMenu extends React.Component {
   constructor(props){
     super(props);
     this.state={
@@ -14,12 +17,12 @@ export default class TestButtonMenu extends React.Component {
     }
   }
 
-  getMenu(){
+  getMenu(menu_content){
     console.log(this.state);
     if (this.state.menu_state){
       return(
         <div>
-          <SubMenu />
+          <SubMenu menu_content={menu_content}/>
         </div>
       )
     }else{
@@ -28,18 +31,26 @@ export default class TestButtonMenu extends React.Component {
     }
   }
 
-  render(){
+  render({text, menu_content}){
     return(
       <div>
-      <Button onClick={
-        () => {
-          console.log('onclick')
-          this.setState({...this.state, menu_state: !this.state.menu_state})
-        }
-      }>Hello</Button>
-      {/* {this.getMenu()} */}
-      <SubMenu />
-    </div>
+        <StatefulPopover
+          placement={PLACEMENT.bottomLeft}
+          content={({close}) => (
+            <StatefulMenu
+              items={menu_content}
+              onItemSelect={() => close()}
+              overrides={{
+                List: {style: {height: '150px', width: '138px'}},
+              }}
+            />
+          )}
+        >
+          <Button endEnhancer={() => <ChevronDown size={24} />}>
+            {text}
+          </Button>
+        </StatefulPopover>
+      </div>
     )
   }
 }
