@@ -15,6 +15,8 @@ import TestCssGrid from '../routes/TestCssGrid';
 import TestPages from '../routes/TestPages';
 import DJISingleQuoteDashboard from '../routes/DJISingleQuoteDashboard'
 
+import AaStockDashboard from '../routes/AaStockDashboard'
+
 import {Client as Styletron} from 'styletron-engine-atomic';
 import {Provider as StyletronProvider} from 'styletron-react';
 import {LightTheme, BaseProvider} from 'baseui';
@@ -67,6 +69,7 @@ export default class App extends Component {
                   <TestPages path="/test_pages" />
 
                   <DJISingleQuoteDashboard path="/dji_single_quote_dashboard" />
+                  <AaStockDashboard path="/aastock_dashboard/:list_config" />
 
                 </Router>
               </div>
