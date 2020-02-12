@@ -13,6 +13,7 @@ import BuySellList from '../routes/buy_sell_list'
 import TestDataTablePage from '../routes/TestDataTable';
 import TestCssGrid from '../routes/TestCssGrid';
 import TestPages from '../routes/TestPages';
+import DJISingleQuoteDashboard from '../routes/DJISingleQuoteDashboard'
 
 import {Client as Styletron} from 'styletron-engine-atomic';
 import {Provider as StyletronProvider} from 'styletron-react';
@@ -64,6 +65,8 @@ export default class App extends Component {
                   <TestDataTablePage path="/test_datatable" />
                   {/* <TestCssGrid path="/test_css_grid" /> */}
                   <TestPages path="/test_pages" />
+
+                  <DJISingleQuoteDashboard path="/dji_single_quote_dashboard" />
 
                 </Router>
               </div>

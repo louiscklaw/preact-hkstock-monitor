@@ -25,6 +25,7 @@ let page_config = [
   {text: lang.INDEX_INDICES, href:'index_indices'},
   {text: lang.INDEX_DJI, href:'index_dji'},
   {text: lang.INDEX_RMB, href:'index_rmb'},
+  {text: 'test', href:'/test_pages'},
 ]
 
 export default [
