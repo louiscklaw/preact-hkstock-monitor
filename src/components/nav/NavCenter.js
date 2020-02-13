@@ -25,7 +25,7 @@ export default class NavRight extends Component{
 
   getMenu(){
     return MenuList.map(x=>{
-      return ( <NavItem text={x.text} href={x.href} /> )
+      return ( <NavItem text={x.text} href={`/aastock_dashboard/${x.href}`} /> )
     })
   }
 
