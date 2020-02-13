@@ -29,7 +29,11 @@ let getCompanyAnnouncement = (aastock_code) => {
   return getGoogleSearchLink(aastock_code+"公司公告")
 }
 
-
+// https://hk.warrants.com/tc/stock/chart/code/9988
+let getHkWarrantsLink = (aastock_code) => {
+  var stock_code = aastock_code.replace('.hk','').replace(/^0+/,'')
+  return `https://hk.warrants.com/tc/stock/chart/code/${stock_code}`
+}
 
 let getYahooGraphLink = (aastock_code) => {
   return `https://hk.finance.yahoo.com/chart/${aastock_code.slice(1,99).toUpperCase()}`
@@ -58,7 +62,8 @@ export default class AaStockImgs extends React.Component{
             {getNewWindowLink(getRelatedNews(aastock_code), "相關新聞")}/
             {getNewWindowLink(getCompanyAnnouncement(aastock_code), "公司公告")}/
             {getNewWindowLink(getYahooNewsLink(aastock_code), "Y新聞")}/
-            {getNewWindowLink(getYahooGraphLink(aastock_code), "Y圖")}
+            {getNewWindowLink(getYahooGraphLink(aastock_code), "Y圖")}/
+            {getNewWindowLink(getHkWarrantsLink(aastock_code),"法興")}
           </p>
           <div style={{display: 'inline-flex'}}>
             <div>
