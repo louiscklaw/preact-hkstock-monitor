@@ -23,10 +23,7 @@ let dashboard_style={
 
 export default class AaStockDashboard extends Component{
   render({list}){
-    console.log('aastockdashboard', list);
-
     if (Object.keys(dashboard_lists).includes(list)){
-      console.log('list found', dashboard_lists['list_five_g'])
       return(
         <div style={dashboard_style}>
           {getAaStockImgs(dashboard_lists[list])}
