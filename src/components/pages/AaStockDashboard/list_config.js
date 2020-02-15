@@ -1,4 +1,4 @@
-let list_five_G = [
+let list_five_g = [
   '00334.hk',
   '00763.hk',
   '00788.hk',
@@ -56,7 +56,7 @@ let list_dji = []
 let list_rmb = []
 
 export default {
-  list_five_G,
+  list_five_g,
   list_airline,
   list_alcohol,
   list_bank,
