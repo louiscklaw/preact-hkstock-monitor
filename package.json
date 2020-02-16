@@ -55,7 +55,7 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -e $GIT_PARAMS",
-      "pre-commit": "./build.sh && pretty-quick --staged",
+      "pre-commit": "pretty-quick --staged",
       "pre-push": "yarn test && yarn build"
     }
   }
