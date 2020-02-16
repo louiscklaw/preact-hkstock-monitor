@@ -5,7 +5,7 @@ digraph D {
     rankdir=LR;
   }
 
-  app_root [label="app (root)"]
+  app_root [label="app test (root)"]
   nav
   dashboard
 
