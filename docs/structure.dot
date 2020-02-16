@@ -1,0 +1,39 @@
+digraph D {
+  node [shape=box];
+
+  {
+    rankdir=LR;
+  }
+
+  app_root [label="app (root)"]
+  nav
+  dashboard
+
+  {
+    rank=same app_root nav;
+    rankdir=LR;
+  }
+
+  subgraph sub_R {
+    {
+      rankdir=LR;
+      rank=same
+    }
+    Signed_in_link
+    Signed_out_link
+    nav -> Signed_in_link
+    nav -> Signed_out_link
+  }
+
+  subgraph sub_D {
+    dashboard -> project_list
+    dashboard -> notifications
+    dashboard -> project_details
+    dashboard -> create_project
+    dashboard -> sign_in
+    dashboard -> sign_up
+  }
+
+  app_root -> nav
+  app_root -> dashboard
+}
