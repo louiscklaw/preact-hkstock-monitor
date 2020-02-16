@@ -50,9 +50,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test",
-      "pre-push": "yarn test",
-      "...": "..."
+      "commit-msg": "commitlint -e $GIT_PARAMS",
+      "pre-commit": "pretty-quick --staged"
     }
   }
 }
