@@ -1,4 +1,14 @@
-import './style';
-import App from './components/app';
+import { Component } from "preact";
 
-export default App;
+import "./style";
+import App from "./components/app";
+
+export default class Index extends Component {
+  render() {
+    return (
+      <>
+        <App />
+      </>
+    );
+  }
+}
