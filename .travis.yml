@@ -1,6 +1,7 @@
 dist: bionic
 
 script:
+  - yarn
   - yarn test
 
 after_success:
