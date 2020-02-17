@@ -1,8 +1,10 @@
 dist: bionic
 
-script:
+before_script:
   - yarn
-  - yarn test
+
+script:
+  - yarn build
 
 after_success:
   - id
