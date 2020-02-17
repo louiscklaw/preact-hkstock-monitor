@@ -78,7 +78,10 @@ export default class App extends Component {
             </BaseProvider>
           </StyletronProvider>
         </div>
-        <GithubCorner href="https://github.com/louiscklaw/preact-hkstock-monitor" />
+        <GithubCorner
+          href="https://github.com/louiscklaw/preact-hkstock-monitor"
+          direction="left"
+        />
       </>
     );
   }
